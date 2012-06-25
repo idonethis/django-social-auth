@@ -6,8 +6,8 @@ from social_auth.backends.google import GoogleOAuthBackend, GoogleOAuth
 from social_auth.backends.exceptions import AuthMissingParameter
 
 
-GOOGLEAPPS_DOMAIN = 'googleapps_domain'
-GOOGLEAPPS_EMAIL = 'googleapps_email'
+GOOGLEAPPS_DOMAIN = 'domain'
+GOOGLEAPPS_EMAIL = 'email'
 GOOGLEAPPS_OPENID_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=%s'
 
 class GoogleAppsBackend(GoogleBackend):
