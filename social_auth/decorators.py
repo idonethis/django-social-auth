@@ -38,16 +38,14 @@ def dsa_view(redirect_name=None):
             except Exception, e:  # some error ocurred
                 if RAISE_EXCEPTIONS:
                     raise
-                log('error', unicode(e), exc_info=True, extra={
-                    'request': request
-                })
-
                 mod, func_name = PROCESS_EXCEPTIONS.rsplit('.', 1)
                 try:
                     process = getattr(import_module(mod), func_name,
                                       lambda *args: None)
                 except ImportError:
-                    pass
+                    log('error', unicode(e), exc_info=True, extra={
+                        'request': request
+                    })
                 else:
                     process(request, backend, e)
 
