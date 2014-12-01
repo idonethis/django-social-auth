@@ -3,3 +3,4 @@ oauth2>=1.5.167
 #python_openid>=2.2
 -e git://github.com/idonethis/python-openid-with-google-apps.git#egg=python-open
 id
+simplejson
