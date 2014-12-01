@@ -7,7 +7,7 @@ from urllib import urlencode
 from urllib2 import urlopen
 
 from django.contrib.auth import authenticate
-from django.utils import simplejson
+import simplejson
 
 from social_auth.backends import SocialAuthBackend, BaseAuth, USERNAME
 from social_auth.utils import log, setting

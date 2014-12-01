@@ -9,7 +9,7 @@ values.
 By default account id is stored in extra_data field, check OAuthBackend
 class for details on how to extend it.
 """
-from django.utils import simplejson
+import simplejson
 
 from social_auth.backends import ConsumerBasedOAuth, OAuthBackend, USERNAME
 from social_auth.backends.exceptions import AuthCanceled
@@ -26,10 +26,10 @@ class DoubanBackend(OAuthBackend):
     """Douban OAuth authentication backend"""
     name = 'douban'
     EXTRA_DATA = [('id', 'id')]
-    
+
     def get_user_id(self, details, response):
         return response['db:uid']['$t']
-    
+
     def get_user_details(self, response):
         """Return user details from Douban"""
         return {USERNAME: response["db:uid"]["$t"],
@@ -51,7 +51,7 @@ class DoubanAuth(ConsumerBasedOAuth):
         url = 'http://api.douban.com/people/%40me?&alt=json'
         request = self.oauth_request(access_token, url)
         json = self.fetch_response(request)
-    
+
         try:
             return simplejson.loads(json)
         except ValueError:

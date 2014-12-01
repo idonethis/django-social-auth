@@ -19,7 +19,7 @@ import hmac
 import hashlib
 import time
 
-from django.utils import simplejson
+import simplejson
 from django.contrib.auth import authenticate
 
 from social_auth.backends import BaseOAuth2, OAuthBackend, USERNAME

@@ -11,7 +11,7 @@ Then update your settings values using registration information
 """
 
 from django.conf import settings
-from django.utils import simplejson
+import simplejson
 
 from urllib import urlencode, unquote
 from urllib2 import Request, urlopen, HTTPError

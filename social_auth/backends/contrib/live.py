@@ -16,7 +16,7 @@ AuthUnknownError - if user data retrieval fails
 """
 from urllib import urlencode, urlopen
 
-from django.utils import simplejson
+import simplejson
 
 from social_auth.utils import setting
 from social_auth.backends import BaseOAuth2, OAuthBackend, USERNAME

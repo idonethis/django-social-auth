@@ -2,7 +2,7 @@ from urllib2 import urlopen
 from oauth2 import Consumer as OAuthConsumer, Token, Request as OAuthRequest, \
                    SignatureMethod_HMAC_SHA1
 
-from django.utils import simplejson
+import simplejson
 
 from social_auth.models import User
 

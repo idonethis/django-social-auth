@@ -12,7 +12,7 @@ to enable this service support.
 """
 import urllib
 
-from django.utils import simplejson
+import simplejson
 
 from social_auth.utils import setting
 from social_auth.backends import OAuthBackend, USERNAME

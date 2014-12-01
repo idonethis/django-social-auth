@@ -1,6 +1,6 @@
 import urllib
 
-from django.utils import simplejson
+import simplejson
 
 from social_auth.backends import BaseOAuth2, OAuthBackend, USERNAME
 

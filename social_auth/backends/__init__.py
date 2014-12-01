@@ -22,7 +22,7 @@ from oauth2 import Consumer as OAuthConsumer, Token, Request as OAuthRequest
 from django.db import models
 from django.contrib.auth import authenticate
 from django.contrib.auth.backends import ModelBackend
-from django.utils import simplejson
+import simplejson
 from django.utils.importlib import import_module
 
 from social_auth.utils import setting, log, model_to_ctype, ctype_to_model, \
